@@ -1,0 +1,23 @@
+[user]
+	name = Alexander.Klishin
+	email = Alexander.Klishin@billing.ru
+[color]
+	ui = true
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[alias]
+	ci = commit
+	st = status
+	br = branch
+	co = checkout
+#	l = log --decorate --graph --pretty=format:\"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n\"
+#	l = log --pretty=oneline --abbrev-commit --all --graph --decorate
+#	ll = log --decorate --stat --graph --pretty=format:\"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n\"
+	l    = log --graph --decorate --pretty=format:\"%Cgreen%h%Creset %d (%ar - %Cred%an%Creset), %s\"
+	la   = log --graph --decorate --pretty=format:\"%Cgreen%h%Creset %d (%ar - %Cred%an%Creset), %s\" --all
+	ll   = log --graph --decorate --pretty=short  --abbrev-commit
+	lla  = log --graph --decorate --pretty=short  --abbrev-commit --all
+	lll  = log --graph --decorate --pretty=fuller --abbrev-commit
+	llla = log --graph --decorate --pretty=fuller --abbrev-commit --all
