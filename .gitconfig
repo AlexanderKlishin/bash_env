@@ -1,6 +1,6 @@
 [user]
 	name = Alexander.Klishin
-	email = Alexander.Klishin@billing.ru
+	email = alexander.klishin@billing.ru
 [color]
 	ui = true
 [core]
@@ -9,6 +9,7 @@
 	tool = vimdiff
 [alias]
 	ci = commit
+	s = status --untracked-files=no
 	st = status
 	br = branch
 	co = checkout
@@ -21,3 +22,5 @@
 	lla  = log --graph --decorate --pretty=short  --abbrev-commit --all
 	lll  = log --graph --decorate --pretty=fuller --abbrev-commit
 	llla = log --graph --decorate --pretty=fuller --abbrev-commit --all
+[push]
+	default = nothing
