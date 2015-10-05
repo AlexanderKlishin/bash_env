@@ -1,3 +1,6 @@
 [submodule ".vim/bundle/mru"]
 	path = .vim/bundle/mru
 	url = https://github.com/yegappan/mru.git
+[submodule ".vim/bundle/vim-rtags"]
+	path = .vim/bundle/vim-rtags
+	url = https://github.com/lyuts/vim-rtags.git
