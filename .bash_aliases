@@ -49,6 +49,20 @@ export TERM=xterm-256color
 set -o vi
 
 ################################
-export PATH=~/bin:$PATH
-export LD_LIBRARY_PATH=~/bin:$LD_LIBRARY_PATH
+GCC_HOME=/usr/local/CC/gcc-4.8.5
+if [ -d $GCC_HOME ]; then
+    export PATH=$GCC_HOME/bin:$PATH
+    export LD_LIBRARY_PATH=$GCC_HOME/lib64:$LD_LIBRARY_PATH
+fi
+
+if [ -d ~/llvm ]; then
+    export PATH=~/llvm/bin:$PATH
+    export LD_LIBRARY_PATH=~/llvm/lib:$LD_LIBRARY_PATH
+fi
+
+if [ -d ~/rtags ]; then
+    export PATH=~/rtags/bin:$PATH
+fi
+
+export RTAGS_COMPILE_TIMEOUT=30000
 
