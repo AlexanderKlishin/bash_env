@@ -18,8 +18,8 @@ INSTALL_PREFIX=/usr/local/CC/gcc-$VER
 [ -d gcc-$VER/cloog ] || (tar xf cloog-0.18.1.tar.gz && mv cloog-0.18.1 gcc-$VER/cloog)
 [ -d gcc-$VER/isl ] || (tar xf isl-0.12.2.tar.bz2 && mv isl-0.12.2 gcc-$VER/isl)
 
-mkdir -p gcc
-cd gcc
+mkdir -p gcc-src
+cd gcc-src
 
 ../gcc-$VER/configure --prefix=$INSTALL_PREFIX --enable-languages=c,c++ --disable-multilib
 make -j 5 $VERBOSE

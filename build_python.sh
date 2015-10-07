@@ -1,21 +1,20 @@
 
-HOME=$(cd ~ && pwd)
-GCC_HOME=$(dirname $(dirname $(which g++)))
+set -exv
+
+INSTALL_PREFIX=$(cd ~ && pwd)/python
 RELEASE=2.7.9
 FILE=Python-$RELEASE.tgz
 
-if [ ! -f Python-$RELEASE.tgz ]; then
-    wget https://www.python.org/ftp/python/$RELEASE/$FILE
-fi
+[ -f Python-$RELEASE.tgz ] || wget https://www.python.org/ftp/python/$RELEASE/$FILE
 
 DIR=$(basename $FILE .tgz)
-if [ ! -d $DIR ]; then
-    tar -xvf $FILE
-fi
+[ -d $DIR ] || tar -xvf $FILE
 
 cd $DIR
 
-./configure --prefix=$HOMEME/python || exit 1
-make || exit 1
-make install || exit 1
+./configure --prefix=$INSTALL_PREFIX
+make
+make install
+
+echo "Python installed to $INSTALL_PREFIX"
 
