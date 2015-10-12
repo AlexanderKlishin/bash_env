@@ -17,7 +17,13 @@ set title " change the terminal's title
 set tags=./tags;$HOME
 
 "colorscheme jellybeans
-colorscheme desert_my
+" colorscheme desert_my
+" set background=dark
+"colorscheme solarized
+colorscheme codeschool
+
+" autocomplete
+set dictionary=/usr/share/dict/words
 
 let mapleader=" "
 set timeoutlen=500
@@ -70,11 +76,16 @@ nnoremap * *N
 
 nnoremap <leader>f :MRU<CR>
 
+" ctags
 "nnoremap <leader>g <C-]>
 "nnoremap <leader>b <C-t>
+" rtags
 nnoremap <leader>g :call rtags#JumpTo()<CR>
 nnoremap <leader>b <C-o>
-nnoremap <Leader>l :call rtags#FindRefs()<CR>
+nnoremap <leader>l :call rtags#FindRefs()<CR>
+nnoremap <leader>v :call rtags#FindVirtuals()<CR>
+" rtags use vim QuickFix window
+let g:rtagsUseLocationList = 0
 
 " ignore linewrap
 nmap j gj
@@ -88,7 +99,7 @@ nmap k gk
 "nnoremap <F6> :wall \| make -C ~/src/out/Debug -j6<Cr>
 nnoremap <F7> :wall \| make<Cr>
 nnoremap <leader>m :wall \| make<Cr>
-nnoremap <leader>c :copen<Cr>
+nnoremap <leader>c :botright copen<Cr>
 nnoremap <leader>e :cnext<Cr>
 "set makeprg=ninja
 
@@ -99,10 +110,11 @@ command Ctags !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
 " commands
 "command Ctags !ctags -R * /usr/include/*
 command Astyle !astyle -A3 -t4 -k3 -W3 -U -H -o -xn -xc -xk -O -m0 %
-command -nargs=1 G Grep -R --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d <args> *
+command -nargs=1 G Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <args> *
+command -nargs=1 Gi Grep -R -I -i --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <args> *
 "nnoremap & :G <cword> <CR>
-nnoremap & :Grep -R --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d <cword> * <CR>
-nnoremap ^ :Grep -R --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d <cword> %:h <CR>
+nnoremap & :Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <cword> * <CR>
+nnoremap ^ :Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <cword> %:h <CR>
 
 " nnoremap <C-[> <C-T>
 
@@ -119,6 +131,7 @@ set vb t_vb=
 " CodeStyle
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " always show statusline
