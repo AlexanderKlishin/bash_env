@@ -11,9 +11,9 @@ for F in $FILES; do
 	ln -s "$SH/$F" ~/$F_ || exit 1
 done
 
-#cd "$SH"
-#git submodule init || exit 2
-#git submodule update || exit 3
+cd "$SH"
+git submodule init || exit 2
+git submodule update || exit 3
 
 $SH/fonts/install.sh || exit 4
 
