@@ -3,9 +3,17 @@ set -exv
 
 HOME=$(cd ~ && pwd)
 INSTALL_PREFIX=$HOME/rtags
-GCC_HOME=$(dirname $(dirname $(which g++)))
+if [ -z "$GCC_HOME" ]; then
+    if [ -d /usr/local/CC/gcc-4.8.5 ]; then
+        GCC_HOME=/usr/local/CC/gcc-4.8.5
+    else
+        GCC_HOME=$(dirname $(dirname $(which g++)))
+    fi
+fi
 LLVM_HOME=$HOME/llvm
 [ -d $LLVM_HOME ] || LLVM_HOME=$(dirname $(dirname $(which llvm-config)))
+
+echo -e "Using:\n\tgcc:$GCC_HOME\n\tllvm:$LLVM_HOME"
 
 cd rtags
 
@@ -22,8 +30,31 @@ make install
 cp bin/* $INSTALL_PREFIX/bin
 
 cd $INSTALL_PREFIX/bin
+
+rm -f g++ c++ gcc c
 ln -s gcc-rtags-wrapper.sh g++
 ln -s gcc-rtags-wrapper.sh c++
 ln -s gcc-rtags-wrapper.sh gcc
 ln -s gcc-rtags-wrapper.sh c
 
+rm -f *.impl
+mv rc rc.impl
+mv rdm rdm.impl
+
+cat << EOF > rc
+#!/bin/bash -e
+
+export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
+
+~/rtags/bin/rc.impl \$@
+EOF
+chmod +x rc
+
+cat << EOF > rdm
+#!/bin/bash -e
+
+export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
+
+~/rtags/bin/rdm.impl \$@
+EOF
+chmod +x rdm
