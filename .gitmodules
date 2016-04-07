@@ -10,3 +10,6 @@
 [submodule "rtags"]
 	path = rtags
 	url = https://github.com/Andersbakken/rtags.git
+[submodule ".vim/bundle/robotframework-vim"]
+	path = .vim/bundle/robotframework-vim
+	url = https://github.com/mfukar/robotframework-vim
