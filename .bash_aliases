@@ -49,11 +49,11 @@ export TERM=xterm-256color
 set -o vi
 
 ################################
-GCC_HOME=/usr/local/CC/gcc-4.8.5
-if [ -d $GCC_HOME ]; then
-    export PATH=$GCC_HOME/bin:$PATH
-    export LD_LIBRARY_PATH=$GCC_HOME/lib64:$LD_LIBRARY_PATH
-fi
+#GCC_HOME=/usr/local/CC/gcc-4.8.5
+#if [ -d $GCC_HOME ]; then
+#    export PATH=$GCC_HOME/bin:$PATH
+#    export LD_LIBRARY_PATH=$GCC_HOME/lib64:$LD_LIBRARY_PATH
+#fi
 
 if [ -d ~/llvm ]; then
     export PATH=~/llvm/bin:$PATH
