@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/robotframework-vim"]
 	path = .vim/bundle/robotframework-vim
 	url = https://github.com/mfukar/robotframework-vim
+[submodule ".vim/bundle/vim-colors-solarized"]
+	path = .vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
