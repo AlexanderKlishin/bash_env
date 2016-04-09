@@ -18,9 +18,11 @@ set tags=./tags;$HOME
 
 "colorscheme jellybeans
 " colorscheme desert_my
-" set background=dark
-"colorscheme solarized
-colorscheme codeschool
+set background=dark
+colorscheme solarized
+"colorscheme enigma
+"colorscheme codeschool
+"colorscheme gruvbox
 
 " autocomplete
 set dictionary=/usr/share/dict/words
@@ -37,7 +39,7 @@ set timeoutlen=500
 "	highlight bad spaces
 let w:m2=matchadd('ErrorMsg', '[ \t]\+$', -1)
 if exists('+colorcolumn')
-	set colorcolumn=121
+"	set colorcolumn=121
 else
 "	au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>121v.\+', -1)
 endif
