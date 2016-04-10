@@ -36,13 +36,15 @@ set timeoutlen=500
 "	-1 means any search highlighting will override the match highlighting
 "	highlight long lines
 "let w:m1=matchadd('ErrorMsg', '\%>121v.\+', -1)
+
 "	highlight bad spaces
-let w:m2=matchadd('ErrorMsg', '[ \t]\+$', -1)
-if exists('+colorcolumn')
+"let w:m2=matchadd('ErrorMsg', '[ \t]\+$', -1)
+"if exists('+colorcolumn')
 "	set colorcolumn=121
-else
+"else
 "	au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>121v.\+', -1)
-endif
+"endif
+"
 " hihlight ColorColumn ctermbg=darkgrey guibg=darkgrey
 highlight ColorColumn ctermbg=238 guibg=238
 
