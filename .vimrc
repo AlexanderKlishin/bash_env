@@ -181,6 +181,7 @@ let g:airline_theme='bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
 
 " ctrlp
-let g:ctrlp_extensions = ['tag']
-let g:ctrlp_cmd = 'CtrlPTag'
+"let g:ctrlp_extensions = ['tag']
+"let g:ctrlp_cmd = 'CtrlPTag'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
