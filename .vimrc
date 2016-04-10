@@ -101,7 +101,7 @@ nmap k gk
 "nnoremap <F6> :wall \| make -C ~/src/out/Debug -j6<Cr>
 nnoremap <F7> :wall \| make<Cr>
 nnoremap <leader>m :wall \| make<Cr>
-nnoremap <leader>c :botright copen<Cr>
+nnoremap <leader>z :botright copen<Cr>
 nnoremap <leader>e :cnext<Cr>
 "set makeprg=ninja
 
@@ -117,6 +117,11 @@ command -nargs=1 Gi Grep -R -I -i --exclude=tags --exclude=*.o --exclude=*.a --e
 "nnoremap & :G <cword> <CR>
 nnoremap & :Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <cword> * <CR>
 nnoremap ^ :Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <cword> %:h <CR>
+
+" Ack
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 " nnoremap <C-[> <C-T>
 
