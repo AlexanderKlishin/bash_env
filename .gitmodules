@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/minibufexpl.vim"]
 	path = .vim/bundle/minibufexpl.vim
 	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
