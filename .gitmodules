@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/Vim-Jinja2-Syntax"]
 	path = .vim/bundle/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
+[submodule "bash-git-prompt"]
+	path = bash-git-prompt
+	url = https://github.com/magicmonty/bash-git-prompt.git
