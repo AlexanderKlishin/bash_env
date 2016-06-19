@@ -1,5 +1,12 @@
+#!/bin/bash -e
 
-set -exv
+# check reqirements
+exists_or_exit() {
+    which $1 > /dev/null || { echo "$1 not installed"; exit 1; }
+}
+exists_or_exit g++
+exists_or_exit llvm-config
+exists_or_exit cmake
 
 HOME=$(cd ~ && pwd)
 INSTALL_PREFIX=$HOME/rtags
@@ -37,24 +44,26 @@ ln -s gcc-rtags-wrapper.sh c++
 ln -s gcc-rtags-wrapper.sh gcc
 ln -s gcc-rtags-wrapper.sh c
 
-rm -f *.impl
-mv rc rc.impl
-mv rdm rdm.impl
+if [ $GCC_HOME != /usr ]; then
+    echo Create wrappers
 
-cat << EOF > rc
+    rm -f *.impl
+    mv rc rc.impl
+    mv rdm rdm.impl
+
+    cat << EOF > rc
 #!/bin/bash -e
-
 export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
-
 ~/rtags/bin/rc.impl \$@
 EOF
-chmod +x rc
 
-cat << EOF > rdm
+    chmod +x rc
+
+    cat << EOF > rdm
 #!/bin/bash -e
-
 export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
-
 ~/rtags/bin/rdm.impl \$@
 EOF
-chmod +x rdm
+    chmod +x rdm
+fi
+
