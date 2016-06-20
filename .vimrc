@@ -66,8 +66,11 @@ nnoremap <leader>x <C-w>x
 " fast tab navigation
 nnoremap <leader>t :tabnew<CR>
 "nnoremap <C-m> :tabnew<CR>
-nnoremap <S-h> :tabNext<cr>
-nnoremap <S-l> :tabnext<cr>
+"TODO: moving fo tabs
+"nnoremap <S-h> :tabNext<cr>
+"nnoremap <S-l> :tabnext<cr>
+nnoremap <S-h> :MBEbp<cr>
+nnoremap <S-l> :MBEbn<cr>
 
 " go to command window
 nnoremap <tab> q:
