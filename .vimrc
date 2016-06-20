@@ -61,6 +61,7 @@ nnoremap <C-k> <C-w>k
 nnoremap \| :vsplit<CR>
 nnoremap _ :split<CR>
 nnoremap \ :q<CR>
+nnoremap - :MBEbd<CR>
 nnoremap <leader>x <C-w>x
 
 " fast tab navigation
