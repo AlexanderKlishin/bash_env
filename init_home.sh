@@ -1,6 +1,5 @@
 
 SH=$(cd `dirname $0` && pwd)
-GN=$(basename "$SH")
 
 FILES=".vim .vimrc .gitconfig .bash_aliases"
 
@@ -13,8 +12,8 @@ done
 
 cd "$SH"
 git submodule init || exit 2
-git submodule update || exit 3
+git submodule update --recursive || exit 3
 
-$SH/fonts/install.sh || exit 4
+./fonts/install.sh || exit 4
 
 echo "done"
