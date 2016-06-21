@@ -115,7 +115,7 @@ nnoremap <leader>e :cnext<Cr>
 set omnifunc=omni#cpp#complete#Main
 command Ctags !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
 
-# by default - order is reversed
+" by default - order is reversed
 let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
 
