@@ -115,6 +115,10 @@ nnoremap <leader>e :cnext<Cr>
 set omnifunc=omni#cpp#complete#Main
 command Ctags !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
 
+# by default - order is reversed
+let g:SuperTabMappingForward = '<s-tab>'
+let g:SuperTabMappingBackward = '<tab>'
+
 " commands
 "command Ctags !ctags -R * /usr/include/*
 command Astyle !astyle -A3 -t4 -k3 -W3 -U -H -o -xn -xc -xk -O -m0 %
