@@ -189,6 +189,8 @@ let g:airline_symbols.linenr = ''
 "let g:airline_symbols.branch = '⎇'
 let g:airline_theme='bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
+" remove 'fileencoding, fileformat' section
+let g:airline_section_y=''
 
 " ctrlp
 "let g:ctrlp_extensions = ['tag']
