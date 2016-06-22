@@ -85,6 +85,11 @@ nnoremap <leader>h :nohlsearch<CR>
 nnoremap * *N
 
 nnoremap <leader>f :MRU<CR>
+let MRU_Filename_Format = {
+    \   'formatter': 'fnamemodify(v:val, ":t") . " (" . fnamemodify(v:val, ":.:~") . ")"',
+    \   'parser': '(\zs.*\ze)',
+    \   'syntax': '^.\{-}\ze('
+    \}
 
 " ctags
 "nnoremap <leader>g <C-]>
