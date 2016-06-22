@@ -2,6 +2,8 @@
 set nocompatible
 
 execute pathogen#infect()
+" pathogen - generate help tags for modules
+Helptags
 
 set autoindent
 set cindent
