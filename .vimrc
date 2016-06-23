@@ -79,10 +79,14 @@ nnoremap <S-l> :MBEbn<cr>
 nnoremap <tab> q:
 " go to command prompt
 nnoremap ; :
-" go to search window
+
+" Searching
+" open search history
 nnoremap <leader>/ q/
 nnoremap <leader>h :nohlsearch<CR>
 nnoremap * *N
+" search selected
+vnoremap / y/<C-R>"<CR>N
 
 nnoremap <leader>f :MRU<CR>
 let MRU_Filename_Format = {
