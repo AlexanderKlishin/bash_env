@@ -86,7 +86,9 @@ nnoremap <leader>/ q/
 nnoremap <leader>h :nohlsearch<CR>
 nnoremap * *N
 " search selected
-vnoremap / y/<C-R>"<CR>N
+vnoremap * y/<C-R>"<CR>N
+" search selected in all files
+vnoremap & y:Ack "<C-R>""<CR>
 
 nnoremap <leader>f :MRU<CR>
 let MRU_Filename_Format = {
