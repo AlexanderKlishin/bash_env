@@ -88,7 +88,7 @@ nnoremap * *N
 " search selected
 vnoremap * y/<C-R>"<CR>N
 " search selected in all files
-vnoremap & y:Ack "<C-R>""<CR>
+vnoremap & y:Ack "<C-R>""<CR>/<C-R>"<CR>
 
 nnoremap <leader>f :MRU<CR>
 let MRU_Filename_Format = {
@@ -200,6 +200,8 @@ let g:airline_symbols.linenr = ''
 "let g:airline_symbols.branch = '⎇'
 let g:airline_theme='bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
+" remove branch info
+let g:airline_section_b=''
 " remove 'fileencoding, fileformat' section
 let g:airline_section_y=''
 
