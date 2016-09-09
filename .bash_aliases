@@ -1,8 +1,8 @@
-# .bash_aliases
-
 SRC=$(readlink $BASH_SOURCE)
 SH=$(dirname "$SRC")
 SN=$(basename "$SH")
+
+export EDITOR=vim
 
 ################################
 # git options
