@@ -22,6 +22,8 @@ set tags=./tags;$HOME
 " colorscheme desert_my
 set background=dark
 colorscheme solarized
+" to fix solarized color scheme in tmux
+set t_ut=
 "colorscheme enigma
 "colorscheme codeschool
 "colorscheme gruvbox
