@@ -18,15 +18,20 @@ set title " change the terminal's title
 
 set tags=./tags;$HOME
 
-"colorscheme jellybeans
-" colorscheme desert_my
+" fix background
+let g:solarized_termcolors=16
 set background=dark
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
 colorscheme solarized
 " to fix solarized color scheme in tmux
-set t_ut=
+"set t_ut=
+
 "colorscheme enigma
 "colorscheme codeschool
 "colorscheme gruvbox
+"colorscheme jellybeans
+"colorscheme desert_my
 
 " autocomplete
 set dictionary=/usr/share/dict/words
@@ -50,7 +55,7 @@ set timeoutlen=500
 "endif
 "
 " hihlight ColorColumn ctermbg=darkgrey guibg=darkgrey
-highlight ColorColumn ctermbg=238 guibg=238
+"highlight ColorColumn ctermbg=238 guibg=238
 
 " highlight whitespaces
 "set list
@@ -121,7 +126,7 @@ nmap k gk
 "nnoremap <F5> :wall \| make -C ~/src/out/Release -j6<Cr>
 "nnoremap <F6> :wall \| make -C ~/src/out/Debug -j6<Cr>
 nnoremap <F7> :wall \| make<Cr>
-nnoremap <leader>m :wall \| make<Cr>
+nnoremap <leader>m :wall \| make -C build -j 8<Cr>
 nnoremap <leader>z :botright copen<Cr>
 nnoremap <leader>e :cnext<Cr>
 "set makeprg=ninja
