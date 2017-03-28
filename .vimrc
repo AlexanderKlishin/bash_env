@@ -109,9 +109,11 @@ let MRU_Filename_Format = {
 "nnoremap <leader>b <C-t>
 " rtags
 nnoremap <leader>g :call rtags#JumpTo()<CR>
+nnoremap <leader>G :call rtags#JumpTo("vert")<CR>
 nnoremap <leader>b <C-o>
 nnoremap <leader>l :call rtags#FindRefs()<CR>
 nnoremap <leader>v :call rtags#FindVirtuals()<CR>
+noremap <Leader>w :call rtags#RenameSymbolUnderCursor()<CR>
 " rtags use vim QuickFix window
 let g:rtagsUseLocationList = 0
 
@@ -127,6 +129,7 @@ nmap k gk
 "nnoremap <F6> :wall \| make -C ~/src/out/Debug -j6<Cr>
 nnoremap <F7> :wall \| make<Cr>
 nnoremap <leader>m :wall \| make -C build -j 8<Cr>
+nnoremap <leader>M :!rc -J build<Cr>
 nnoremap <leader>z :botright copen<Cr>
 nnoremap <leader>e :cnext<Cr>
 "set makeprg=ninja
