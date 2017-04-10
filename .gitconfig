@@ -13,6 +13,7 @@
 	st = status
 	br = branch
 	co = checkout
+	prune = fetch --prune
 #	l = log --decorate --graph --pretty=format:\"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n\"
 #	l = log --pretty=oneline --abbrev-commit --all --graph --decorate
 #	ll = log --decorate --stat --graph --pretty=format:\"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n\"
