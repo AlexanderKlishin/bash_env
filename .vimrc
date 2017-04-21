@@ -5,6 +5,8 @@ execute pathogen#infect()
 " pathogen - generate help tags for modules
 Helptags
 
+set noswapfile
+
 set autoindent
 set cindent
 set hlsearch
