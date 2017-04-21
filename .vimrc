@@ -105,6 +105,13 @@ let MRU_Filename_Format = {
     \   'parser': '(\zs.*\ze)',
     \   'syntax': '^.\{-}\ze('
     \}
+" formatter
+" clang-format -dump-config
+let g:clang_format#style_options = {
+            \ "Standard" : "C++11",
+            \ "IndentWidth": 4,
+            \ "TabWidth": 4 }
+vnoremap <Leader>f :ClangFormat<CR>
 
 " ctags
 "nnoremap <leader>g <C-]>
@@ -221,4 +228,3 @@ let g:airline_section_y=''
 "let g:ctrlp_extensions = ['tag']
 "let g:ctrlp_cmd = 'CtrlPTag'
 let g:ctrlp_cmd = 'CtrlPMixed'
-
