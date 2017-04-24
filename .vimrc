@@ -74,6 +74,7 @@ nnoremap _ :split<CR>
 nnoremap \ :q<CR>
 nnoremap - :MBEbd<CR>
 nnoremap <leader>x <C-w>x
+nnoremap <leader>\ :%bd \| e#<CR>
 
 " fast tab navigation
 nnoremap <leader>t :tabnew<CR>
