@@ -3,5 +3,15 @@ sudo yum install -y \
          ctags \
          clang \
          clang-devel \
-         gcc-c++
+         gcc-c++ \
+         cmake \
+         cmake3 \
+         bc \
+         git \
+         vim \
+         tmux \
+         tig \
+         ansible \
+         ack \
+         man-pages
 
