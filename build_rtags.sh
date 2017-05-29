@@ -38,11 +38,11 @@ cp bin/* $INSTALL_PREFIX/bin
 
 cd $INSTALL_PREFIX/bin
 
-rm -f g++ c++ gcc c
-ln -s gcc-rtags-wrapper.sh g++
-ln -s gcc-rtags-wrapper.sh c++
-ln -s gcc-rtags-wrapper.sh gcc
-ln -s gcc-rtags-wrapper.sh c
+#rm -f g++ c++ gcc c
+#ln -s gcc-rtags-wrapper.sh g++
+#ln -s gcc-rtags-wrapper.sh c++
+#ln -s gcc-rtags-wrapper.sh gcc
+#ln -s gcc-rtags-wrapper.sh c
 
 if [ $GCC_HOME != /usr ]; then
     echo Create wrappers
