@@ -3,6 +3,7 @@ sudo yum install -y \
          ctags \
          clang \
          clang-devel \
+         llvm-devel \
          gcc-c++ \
          cmake \
          cmake3 \
@@ -13,5 +14,7 @@ sudo yum install -y \
          tig \
          ansible \
          ack \
-         man-pages
+         man-pages \
+         zlib-devel \
+         openssl-devel
 
