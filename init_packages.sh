@@ -16,5 +16,8 @@ sudo yum install -y \
          ack \
          man-pages \
          zlib-devel \
-         openssl-devel
+         openssl-devel \
+         cowsay \
+         fortune \
+         figlet
 
