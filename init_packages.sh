@@ -19,5 +19,5 @@ sudo yum install -y \
          openssl-devel \
          cowsay \
          fortune \
-         figlet
-
+         figlet \
+         perf
