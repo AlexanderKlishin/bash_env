@@ -200,6 +200,10 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 
+if empty(maparg(']', 'n'))
+    nmap ] <Plug>VinegarUp
+endif
+
 " tagbar
 map <F8> :TagbarToggle<CR>
 let g:tagbar_sort = 0
