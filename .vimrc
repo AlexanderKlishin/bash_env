@@ -63,6 +63,9 @@ set timeoutlen=500
 "set list
 "set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
+" folders
+nnoremap <leader><leader> za
+
 " fast window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
