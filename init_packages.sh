@@ -20,4 +20,5 @@ sudo yum install -y \
          cowsay \
          fortune \
          figlet \
-         perf
+         perf \
+         fontconfig
