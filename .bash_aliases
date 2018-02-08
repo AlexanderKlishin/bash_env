@@ -60,9 +60,7 @@ if [ -d ~/llvm ]; then
     export LD_LIBRARY_PATH=~/llvm/lib:$LD_LIBRARY_PATH
 fi
 
-if [ -d ~/rtags ]; then
-    export PATH=~/rtags/bin:$PATH
-fi
+export PATH=~/rtags/bin:$PATH
 
 export RTAGS_COMPILE_TIMEOUT=30000
 
