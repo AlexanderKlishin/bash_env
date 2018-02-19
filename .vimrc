@@ -124,7 +124,7 @@ vnoremap <Leader>f :ClangFormat<CR>
 nnoremap <leader>g :call rtags#JumpTo()<CR>
 nnoremap <leader>G :call rtags#JumpTo("vert")<CR>
 nnoremap <leader>b <C-o>
-nnoremap <leader>l :call rtags#FindRefs()<CR>
+nnoremap <leader>r :call rtags#FindRefs()<CR>
 nnoremap <leader>v :call rtags#FindVirtuals()<CR>
 noremap <Leader>w :call rtags#RenameSymbolUnderCursor()<CR>
 " rtags use vim QuickFix window
@@ -198,7 +198,6 @@ set statusline+=%=[%l,%v]\ %p%%
 " map MM :BookmarkToggle<CR>
 " map <C-m> :BookmarkShowAll<CR>
 
-nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
@@ -222,9 +221,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-"let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '◀'
-"let g:airline_symbols.branch = '⎇'
 let g:airline_theme='bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
 " remove branch info
