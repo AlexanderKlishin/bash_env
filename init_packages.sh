@@ -21,4 +21,5 @@ sudo yum install -y \
          fortune \
          figlet \
          perf \
-         fontconfig
+         fontconfig \
+         dos2unix
