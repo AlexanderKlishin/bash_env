@@ -43,6 +43,7 @@ cd $INSTALL_PREFIX/bin
 #ln -s gcc-rtags-wrapper.sh g++
 #ln -s gcc-rtags-wrapper.sh c++
 #ln -s gcc-rtags-wrapper.sh gcc
+#ln -s gcc-rtags-wrapper.sh cc
 #ln -s gcc-rtags-wrapper.sh c
 
 if [ $GCC_HOME != /usr ]; then
