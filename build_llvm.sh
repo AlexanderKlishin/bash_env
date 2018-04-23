@@ -1,6 +1,17 @@
 
 set -exv
 
+# 600 version
+#CMD=git clone -b release_60
+#$CMD http://llvm.org/git/llvm.git
+
+#$CMD http://llvm.org/git/clang.git             llvm/tools/clang
+#$CMD http://llvm.org/git/clang-tools-extra.git llvm/tools/clang/tools/extra
+
+#$CMD http://llvm.org/git/compiler-rt.git   llvm/projects/compiler-rt
+#$CMD http://llvm.org/git/libcxx.git        llvm/projects/libcxx
+#$CMD http://llvm.org/git/libcxxabi.git     llvm/projects/libcxxabi
+
 HOME=$(cd ~ && pwd)
 INSTALL_PREFIX=$HOME/llvm
 GCC_HOME=$(dirname $(dirname $(which g++)))
