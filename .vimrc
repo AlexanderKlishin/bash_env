@@ -121,8 +121,8 @@ vnoremap <Leader>f :ClangFormat<CR>
 "nnoremap <leader>g <C-]>
 "nnoremap <leader>b <C-t>
 " rtags
-nnoremap <leader>g :call rtags#JumpTo()<CR>
-nnoremap <leader>G :call rtags#JumpTo("vert")<CR>
+nnoremap <leader>g :call rtags#JumpTo(g:SAME_WINDOW)<CR>
+nnoremap <leader>G :call rtags#JumpTo(g:V_SPLIT)<CR>
 nnoremap <leader>b <C-o>
 nnoremap <leader>r :call rtags#FindRefs()<CR>
 nnoremap <leader>v :call rtags#FindVirtuals()<CR>
