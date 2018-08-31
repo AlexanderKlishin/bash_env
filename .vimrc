@@ -162,8 +162,14 @@ command Astyle !astyle -A3 -t4 -k3 -W3 -U -H -o -xn -xc -xk -O -m0 %
 command -nargs=1 G Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <args> *
 command -nargs=1 Gi Grep -R -I -i --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <args> *
 "nnoremap & :G <cword> <CR>
-nnoremap & :Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <cword> * <CR>
-nnoremap ^ :Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <cword> %:h <CR>
+nnoremap & :Grep -R -I
+    \ --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d
+    \ --exclude-dir=build --exclude-dir=build_dir --exclude-dir=ns_build_env
+    \ <cword> * <CR>
+nnoremap ^ :Grep -R -I
+    \ --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d
+    \ --exclude-dir=build --exclude-dir=build_dir --exclude-dir=ns_build_env
+    \ <cword> %:h <CR>
 
 " Ack
 if executable('ag')
