@@ -125,6 +125,7 @@ nnoremap <leader>g :call rtags#JumpTo(g:SAME_WINDOW)<CR>
 nnoremap <leader>G :call rtags#JumpTo(g:V_SPLIT)<CR>
 nnoremap <leader>b <C-o>
 nnoremap <leader>r :call rtags#FindRefs()<CR>
+nnoremap <leader>R :call rtags#FindRefsCallTree()<CR>
 nnoremap <leader>v :call rtags#FindVirtuals()<CR>
 noremap <Leader>w :call rtags#RenameSymbolUnderCursor()<CR>
 " rtags use vim QuickFix window
