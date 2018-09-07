@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+SH=$(cd `dirname $0` && pwd)
+
 # check reqirements
 exists_or_exit() {
     which $1 > /dev/null || { echo "$1 not installed"; exit 1; }
@@ -36,6 +38,7 @@ cmake . -DLLVM_CONFIG=$LLVM_HOME/bin/llvm-config \
 make -j
 make install
 cp bin/* $INSTALL_PREFIX/bin
+cp $SH/rdm.sh $INSTALL_PREFIX/bin
 
 cd $INSTALL_PREFIX/bin
 
