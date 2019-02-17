@@ -85,3 +85,6 @@
 [submodule ".vim/bundle/gv.vim"]
 	path = .vim/bundle/gv.vim
 	url = https://github.com/junegunn/gv.vim
+[submodule ".vim/bundle/vim-obsession"]
+	path = .vim/bundle/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
