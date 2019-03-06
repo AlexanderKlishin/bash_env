@@ -207,6 +207,7 @@ set statusline+=%=[%l,%v]\ %p%%
 " map <C-m> :BookmarkShowAll<CR>
 
 nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>N :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 
