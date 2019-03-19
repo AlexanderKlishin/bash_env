@@ -66,6 +66,7 @@ cd $INSTALL_PREFIX/bin
 #ln -s gcc-rtags-wrapper.sh c
 
 if [ $OS = "Ubuntu" ]; then
+    :
 else
     if [ $GCC_HOME != /usr ]; then
         echo Create wrappers
@@ -76,17 +77,16 @@ else
 
         cat << EOF > rc
 #!/bin/bash -e
-    export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
-    ~/rtags/bin/rc.impl \$@
-    EOF
-
+export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
+~/rtags/bin/rc.impl \$@
+EOF
         chmod +x rc
 
         cat << EOF > rdm
 #!/bin/bash -e
-    export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
-    ~/rtags/bin/rdm.impl \$@
-    EOF
+export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
+~/rtags/bin/rdm.impl \$@
+EOF
         chmod +x rdm
     fi
 fi
