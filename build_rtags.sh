@@ -7,7 +7,7 @@ exists_or_exit() {
     which $1 > /dev/null || { echo "$1 not installed"; exit 1; }
 }
 exists_or_exit g++
-exists_or_exit llvm-config
+#exists_or_exit llvm-config
 exists_or_exit cmake
 
 HOME=$(cd ~ && pwd)
@@ -16,6 +16,8 @@ INSTALL_PREFIX=$HOME/rtags
 OS=Unknown
 if [ -f /etc/lsb-release ]; then
     OS=$(cat /etc/lsb-release | grep DISTRIB_ID | cut -d= -f2)
+elif [ -f /etc/redhat-release ]; then
+    OS="RedHat"$(rpm --eval "%{dist}" | sed 's|.el||')
 fi
 
 cd rtags
@@ -32,6 +34,18 @@ COMMON+=" -DCMAKE_BUILD_TYPE=RELEASE"
 
 if [ $OS = "Ubuntu" ]; then
     cmake .. $COMMON
+elif [ $OS = "RedHat7" ]; then
+    if [ ! -d /opt/rh/llvm-toolset-7 ]; then
+        #scl enable devtoolset-7 llvm-toolset-7 bash
+        echo "install llvm-toolset-7"
+        exit 1
+    fi
+    echo "build $OS with devtoolset"
+    PATH=/opt/rh/llvm-toolset-7/root/usr/bin:$PATH \
+    CXX=/opt/rh/llvm-toolset-7/root/usr/bin/clang++ \
+    CC=/opt/rh/llvm-toolset-7/root/usr/bin/clang \
+    cmake .. $COMMON
+        #-DLLVM_CONFIG=/opt/rh/llvm-toolset-7/root/usr/bin/llvm-config
 else
     if [ -z "$GCC_HOME" ]; then
         if [ -d /usr/local/CC/gcc-4.8.5 ]; then
@@ -55,6 +69,7 @@ make -j 2
 make install
 cp bin/* $INSTALL_PREFIX/bin
 cp $SH/rdm.sh $INSTALL_PREFIX/bin
+cp $SH/rc.sh $INSTALL_PREFIX/bin
 
 cd $INSTALL_PREFIX/bin
 
@@ -68,25 +83,12 @@ cd $INSTALL_PREFIX/bin
 if [ $OS = "Ubuntu" ]; then
     :
 else
-    if [ $GCC_HOME != /usr ]; then
-        echo Create wrappers
+    rm -f *.impl
+    mv rc rc.impl
 
-        rm -f *.impl
-        mv rc rc.impl
-        mv rdm rdm.impl
-
-        cat << EOF > rc
+    cat << EOF > rc
 #!/bin/bash -e
-export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
-~/rtags/bin/rc.impl \$@
+LD_LIBRARY_PATH=/opt/rh/llvm-toolset-7/root/usr/lib64 ~/rtags/bin/rc.impl \$@
 EOF
         chmod +x rc
-
-        cat << EOF > rdm
-#!/bin/bash -e
-export LD_LIBRARY_PATH=$GCC_HOME/lib64:\$LD_LIBRARY_PATH
-~/rtags/bin/rdm.impl \$@
-EOF
-        chmod +x rdm
-    fi
 fi
