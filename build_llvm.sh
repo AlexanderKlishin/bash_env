@@ -14,12 +14,19 @@ set -exv
 
 HOME=$(cd ~ && pwd)
 INSTALL_PREFIX=$HOME/llvm
-GCC_HOME=$(dirname $(dirname $(which g++)))
+#GCC_HOME=$(dirname $(dirname $(which g++)))
 LLVM_URL='http://llvm.org/svn/llvm-project'
-RELEASE=370
+RELEASE=801
 
 export PATH=$HOME/python/bin:$PATH
 export LD_LIBRARY_PATH=$GCC_HOME/lib64
+
+if [ $OS = "RedHat7" ]; then
+   if [ ! -d /opt/rh/devtoolset-8 ]; then
+        echo "install devtoolset-8: scl enable devtoolset-8 /bin/bash"
+        exit 1
+    fi
+fi
 
 echo "Build llvm, gcc home = $GCC_HOME"
 
@@ -40,13 +47,14 @@ cd build
 
 # build "Release" version, non release version has problem in parsing:
 #   "Leftover expressions for odr-use checking"' failed
-cmake .. -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_CXX_COMPILER=$GCC_HOME/bin/g++ \
-    -DCMAKE_C_COMPILER=$GCC_HOME/bin/gcc \
-    -DGCC_INSTALL_PREFIX=$GCC_HOME \
+cmake3 .. -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX
 
-make
+    #-DCMAKE_CXX_COMPILER=$GCC_HOME/bin/g++
+    #-DCMAKE_C_COMPILER=$GCC_HOME/bin/gcc
+    #-DGCC_INSTALL_PREFIX=$GCC_HOME
+
+make -j 4
 make install
 
 # according to http://clang-analyzer.llvm.org/scan-build
