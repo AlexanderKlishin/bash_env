@@ -35,16 +35,16 @@ COMMON+=" -DCMAKE_BUILD_TYPE=Release"
 if [ $OS = "Ubuntu" ]; then
     cmake .. $COMMON
 elif [ $OS = "RedHat7" ]; then
-    if [ ! -d /opt/rh/llvm-toolset-7 ]; then
-        echo "yum install llvm-toolset-7 llvm-toolset-7-clang-devel llvm-toolset-7-llvm-devel"
-        echo "scl enable devtoolset-7 llvm-toolset-7"
+    if [ ! -d /opt/rh/llvm-toolset-7.0 ]; then
+        echo "yum install llvm-toolset-7.0 llvm-toolset-7.0-clang-devel llvm-toolset-7.0-llvm-devel"
+        echo "scl enable devtoolset-8 llvm-toolset-7.0"
         exit 1
     fi
     echo "build $OS with devtoolset"
-    PATH=/opt/rh/llvm-toolset-7/root/usr/bin:$PATH \
-    CXX=/opt/rh/llvm-toolset-7/root/usr/bin/clang++ \
-    CC=/opt/rh/llvm-toolset-7/root/usr/bin/clang \
-    cmake .. $COMMON -DLLVM_CONFIG=/opt/rh/llvm-toolset-7/root/bin/llvm-config
+    PATH=/opt/rh/llvm-toolset-7.0/root/usr/bin:$PATH \
+    CXX=/opt/rh/llvm-toolset-7.0/root/usr/bin/clang++ \
+    CC=/opt/rh/llvm-toolset-7.0/root/usr/bin/clang \
+    cmake .. $COMMON -DLLVM_CONFIG=/opt/rh/llvm-toolset-7.0/root/bin/llvm-config
 else
     if [ -z "$GCC_HOME" ]; then
         if [ -d /usr/local/CC/gcc-4.8.5 ]; then
