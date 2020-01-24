@@ -36,7 +36,7 @@ if [ $OS = "Ubuntu" ]; then
     cmake .. $COMMON
 elif [ $OS = "RedHat7" ]; then
     if [ ! -d /opt/rh/llvm-toolset-7.0 ]; then
-        echo "yum install llvm-toolset-7.0 llvm-toolset-7.0-clang-devel llvm-toolset-7.0-llvm-devel"
+        echo "yum install llvm-toolset-7.0 llvm-toolset-7.0-clang-devel llvm-toolset-7.0-llvm-devel devtoolset-8"
         echo "scl enable devtoolset-8 llvm-toolset-7.0"
         exit 1
     fi
