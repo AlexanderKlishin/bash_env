@@ -172,7 +172,7 @@ nnoremap ^ :Grep -R -I
     \ --exclude-dir=build --exclude-dir=build_dir --exclude-dir=ns_build_env
     \ <cword> %:h <CR>
 
-command Format !/opt/rh/llvm-toolset-7/root/bin/clang-format -i %
+command Format !clang-format -i %
 
 " Ack
 if executable('ag')
