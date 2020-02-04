@@ -1,0 +1,6 @@
+[nx_devtools]
+name=Red Hat Devtools 7 - $basearch - local mirror
+baseurl=http://repo.net.billing.ru/devtools/7
+enabled=1
+gpgcheck=0
+
