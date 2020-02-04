@@ -1,0 +1,13 @@
+{
+    "service": "vm",
+    "description": "aklishin dev",
+    "parameters": {
+      "image_name": "rhel-server-7-x86_64-kvm",
+      "flavor_name": "w.2xlarge",
+      "service_name": "dev",
+      "servers_count": 1,
+      "server_groups": "application",
+      "lifespan": 3528,
+      "email_alerts": true
+    }
+}
