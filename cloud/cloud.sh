@@ -1,9 +1,8 @@
 #!/bin/bash -e
 
-SH=$(cd `dirname $0` && pwd)
-cd $SH
+cd $(dirname $0)
 
-sudo yum install cloudcli --enablerepo openstack*
+sudo yum install -y cloudcli --enablerepo openstack*
 sudo pip3 install virtualenv
 
 virtualenv ~/cloud

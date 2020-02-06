@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
-SH=$(cd `dirname $0` && pwd)
-cd $SH
+cd $(dirname $0)
 
 sudo pip3 install virtualenv
 
