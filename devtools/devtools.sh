@@ -2,6 +2,7 @@
 
 cd $(dirname $0)
 
+#curl http://repo/scripts/add-devtools-repo.sh | sh
 sudo cp nx_devtools.repo /etc/yum.repos.d/
 sudo cp nx_scl.repo /etc/yum.repos.d/
 
