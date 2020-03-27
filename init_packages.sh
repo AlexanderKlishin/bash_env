@@ -22,4 +22,5 @@ sudo yum install -y \
          figlet \
          perf \
          fontconfig \
-         dos2unix
+         dos2unix \
+         pandoc
