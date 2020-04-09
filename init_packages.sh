@@ -23,4 +23,5 @@ sudo yum install -y \
          perf \
          fontconfig \
          dos2unix \
-         pandoc
+         pandoc \
+         rpm-build
