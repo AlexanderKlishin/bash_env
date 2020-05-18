@@ -24,4 +24,5 @@ sudo yum install -y \
          fontconfig \
          dos2unix \
          pandoc \
-         rpm-build
+         rpm-build \
+         python3
