@@ -25,4 +25,6 @@ sudo yum install -y \
          dos2unix \
          pandoc \
          rpm-build \
-         python3
+         python3 \
+         lksctp-tools-devel \
+         gtest-devel
