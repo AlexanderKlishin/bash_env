@@ -8,6 +8,7 @@ sudo cp nx_scl.repo /etc/yum.repos.d/
 
 sudo yum install -y devtoolset-8 \
     devtoolset-8-libasan-devel \
+    devtoolset-8-libtsan-devel \
     llvm-toolset-7.0 \
     llvm-toolset-7.0-clang-devel \
     llvm-toolset-7.0-llvm-devel \
