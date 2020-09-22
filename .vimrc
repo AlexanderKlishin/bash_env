@@ -116,6 +116,7 @@ let g:clang_format#style_options = {
             \ "IndentWidth": 4,
             \ "TabWidth": 4 }
 vnoremap <Leader>f :ClangFormat<CR>
+nnoremap <leader>F :Format<CR>
 
 " ctags
 "nnoremap <leader>g <C-]>
