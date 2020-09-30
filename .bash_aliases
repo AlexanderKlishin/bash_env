@@ -26,6 +26,8 @@ alias go='git checkout '
 
 unset SSH_ASKPASS
 
+alias n=ninja
+
 ################################
 # Bash Directory Bookmarks
 alias m1='alias g1="cd \"`pwd`\""'
