@@ -26,7 +26,9 @@ alias go='git checkout '
 
 unset SSH_ASKPASS
 
+################################
 alias n=ninja
+CONAN_DEFAULT_PROFILE_PATH=rh7-devtoolset-8
 
 ################################
 # Bash Directory Bookmarks
