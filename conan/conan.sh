@@ -10,5 +10,5 @@ virtualenv ~/conan
 pip3 install conan
 conan remote remove conan-center
 conan remote add arti \
-      https://artifactory.billing.ru/artifactory/api/conan/conan-nwm-dev-local
+      https://artifactory.nexign.com/artifactory/api/conan/conan-nwm-dev-local
 #conan user -r arti Alexander.Klishin -p XXXX
