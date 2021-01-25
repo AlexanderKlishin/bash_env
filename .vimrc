@@ -1,9 +1,4 @@
-
 set nocompatible
-
-execute pathogen#infect()
-" pathogen - generate help tags for modules
-Helptags
 
 set noswapfile
 
@@ -20,48 +15,12 @@ set title " change the terminal's title
 
 set tags=./tags;$HOME
 
-" fix background
-let g:solarized_termcolors=16
-set background=dark
-"let g:solarized_contrast="high"
-"let g:solarized_visibility="high"
-colorscheme solarized
-" to fix solarized color scheme in tmux
-"set t_ut=
-
-"colorscheme enigma
-"colorscheme codeschool
-"colorscheme gruvbox
-"colorscheme jellybeans
-"colorscheme desert_my
-
-" autocomplete
-set dictionary=/usr/share/dict/words
-
 let mapleader=" "
 set timeoutlen=500
 
-" code style - max column
-"http://vim.wikia.com/wiki/Open_vimrc_file
-"http://vim.wikia.com/wiki/Highlight_long_lines
-"	-1 means any search highlighting will override the match highlighting
-"	highlight long lines
-"let w:m1=matchadd('ErrorMsg', '\%>121v.\+', -1)
-
-"	highlight bad spaces
-"let w:m2=matchadd('ErrorMsg', '[ \t]\+$', -1)
-"if exists('+colorcolumn')
-"	set colorcolumn=121
-"else
-"	au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>121v.\+', -1)
-"endif
-"
-" hihlight ColorColumn ctermbg=darkgrey guibg=darkgrey
-"highlight ColorColumn ctermbg=238 guibg=238
-
-" highlight whitespaces
-"set list
-"set listchars=tab:>.,trail:.,extends:#,nbsp:.
+" ignore linewrap
+nmap j gj
+nmap k gk
 
 " folders
 nnoremap <leader><leader> za
@@ -93,6 +52,22 @@ nnoremap <tab> q:
 " go to command prompt
 nnoremap ; :
 
+" keeps the current visual block selection active after changing indent with '<' or '>'
+vnoremap > >gv
+vnoremap < <gv
+
+" CodeStyle
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" copy text to the end-of-line - like y$
+nnoremap Y y$
+
+" silent vim - disable beeping
+set vb t_vb=
+
 " Searching
 " open search history
 nnoremap <leader>/ q/
@@ -102,6 +77,20 @@ nnoremap * *N
 vnoremap * y/<C-R>"<CR>N
 " search selected in all files
 vnoremap & y:Ack "<C-R>""<CR>/<C-R>"<CR>
+
+" autocomplete
+set dictionary=/usr/share/dict/words
+
+execute pathogen#infect()
+" pathogen - generate help tags for modules
+Helptags
+
+" fix background
+let g:solarized_termcolors=16
+set background=dark
+colorscheme solarized
+" to fix solarized color scheme in tmux
+"set t_ut=
 
 nnoremap <leader>f :MRU<CR>
 let MRU_Filename_Format = {
@@ -131,10 +120,6 @@ nnoremap <leader>v :call rtags#FindVirtuals()<CR>
 noremap <Leader>w :call rtags#RenameSymbolUnderCursor()<CR>
 " rtags use vim QuickFix window
 let g:rtagsUseLocationList = 0
-
-" ignore linewrap
-nmap j gj
-nmap k gk
 
 " fast airline color changes
 " set timeoutlen=50
@@ -179,24 +164,6 @@ command Format !clang-format -i %
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
-
-" nnoremap <C-[> <C-T>
-
-" keeps the current visual block selection active after changing indent with '<' or '>'
-vnoremap > >gv
-vnoremap < <gv
-
-" copy text to the end-of-line - like y$
-nnoremap Y y$
-
-" silent vim - disable beeping
-set vb t_vb=
-
-" CodeStyle
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
 
 " always show statusline
 set laststatus=2
