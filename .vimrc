@@ -52,6 +52,9 @@ nnoremap <tab> q:
 " go to command prompt
 nnoremap ; :
 
+" go to next difference
+nnoremap <leader>d ]c
+
 " keeps the current visual block selection active after changing indent with '<' or '>'
 vnoremap > >gv
 vnoremap < <gv
