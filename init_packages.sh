@@ -27,4 +27,5 @@ sudo yum install -y \
          rpm-build \
          python3 \
          lksctp-tools-devel \
-         gtest-devel
+         gtest-devel \
+         oracle-instantclient12.1-devel
