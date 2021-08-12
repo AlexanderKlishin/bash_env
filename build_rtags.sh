@@ -41,7 +41,7 @@ elif [ $OS = "RedHat7" ]; then
     PATH=/opt/rh/llvm-toolset-10.0/root/usr/bin:$PATH \
     CXX=/opt/rh/llvm-toolset-10.0/root/usr/bin/clang++ \
     CC=/opt/rh/llvm-toolset-10.0/root/usr/bin/clang \
-    cmake .. $COMMON -DLLVM_CONFIG=/opt/rh/llvm-toolset-10.0/root/bin/llvm-config
+    /usr/bin/cmake3 .. $COMMON -DLLVM_CONFIG=/opt/rh/llvm-toolset-10.0/root/bin/llvm-config
 else
     echo "build $OS not supported"
 fi
