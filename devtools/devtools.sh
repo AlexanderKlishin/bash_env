@@ -12,6 +12,5 @@ sudo yum install -y \
     devtoolset-10-libtsan-devel \
     llvm-toolset-10.0 \
     llvm-toolset-10.0-clang-devel \
-    llvm-toolset-10.0-llvm-devel \
-    llvm-toolset-10.0-cmake
+    llvm-toolset-10.0-llvm-devel
 
