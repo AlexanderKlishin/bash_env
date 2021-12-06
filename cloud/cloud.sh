@@ -10,4 +10,4 @@ virtualenv ~/cloud
 cp -f pip.conf ~/cloud/
 
 pip3 install cloudcli
-cloud create --services @services.json
+cloud create --services @services.json --project vp_nwm
