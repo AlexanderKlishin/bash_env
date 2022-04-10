@@ -28,4 +28,5 @@ sudo yum install -y \
          python3 \
          lksctp-tools-devel \
          gtest-devel \
+         telnet \
          oracle-instantclient12.1-devel
