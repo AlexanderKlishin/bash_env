@@ -29,4 +29,5 @@ sudo yum install -y \
          lksctp-tools-devel \
          gtest-devel \
          telnet \
-         oracle-instantclient12.1-devel
+         oracle-instantclient12.1-devel \
+         oracle-instantclient12.1-sqlplus
