@@ -29,7 +29,7 @@ unset SSH_ASKPASS
 ################################
 alias n=ninja
 alias v=vim
-export CONAN_DEFAULT_PROFILE_PATH=rh7-devtoolset-10
+export CONAN_DEFAULT_PROFILE_PATH=rh7-devtoolset-11
 
 ################################
 # Bash Directory Bookmarks
