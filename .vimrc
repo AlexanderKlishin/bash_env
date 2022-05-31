@@ -38,6 +38,8 @@ nnoremap - :MBEbd<CR>
 nnoremap <leader>x <C-w>x
 nnoremap <leader>\ :%bd \| e#<CR>
 
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
 " fast tab navigation
 nnoremap <leader>t :tabnew<CR>
 "nnoremap <C-m> :tabnew<CR>
