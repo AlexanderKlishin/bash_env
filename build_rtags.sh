@@ -28,20 +28,20 @@ if [ $OS = "Ubuntu" ]; then
     cmake .. $COMMON
 elif [ $OS = "RedHat7" ]; then
     CLANGVER=$(clang++ --version | grep clang | cut -d " " -f 3 | cut -d "." -f 1)
-    if [ "$CLANGVER" -lt 11 ]; then
-        echo "clang++ must be >= 11, current: $CLANGVER"
+    if [ "$CLANGVER" -lt 10 ]; then
+        echo "clang++ must be >= 10, current: $CLANGVER"
         exit 1
     fi
-    if [ ! -d /opt/rh/llvm-toolset-11.0 ]; then
-        echo "yum install llvm-toolset-11.0 llvm-toolset-11.0-clang-devel llvm-toolset-11.0-llvm-devel devtoolset-11"
-        echo "scl enable devtoolset-9 llvm-toolset-11.0"
+    if [ ! -d /opt/rh/llvm-toolset-10.0 ]; then
+        echo "yum install llvm-toolset-10.0 llvm-toolset-10.0-clang-devel llvm-toolset-10.0-llvm-devel devtoolset-9"
+        echo "scl enable devtoolset-9 llvm-toolset-10.0"
         exit 1
     fi
     echo "build $OS with devtoolset"
-    PATH=/opt/rh/llvm-toolset-11.0/root/usr/bin:$PATH \
-    CXX=/opt/rh/llvm-toolset-11.0/root/usr/bin/clang++ \
-    CC=/opt/rh/llvm-toolset-11.0/root/usr/bin/clang \
-    /usr/bin/cmake3 .. $COMMON -DLLVM_CONFIG=/opt/rh/llvm-toolset-11.0/root/bin/llvm-config
+    PATH=/opt/rh/llvm-toolset-10.0/root/usr/bin:$PATH \
+    CXX=/opt/rh/llvm-toolset-10.0/root/usr/bin/clang++ \
+    CC=/opt/rh/llvm-toolset-10.0/root/usr/bin/clang \
+    /usr/bin/cmake3 .. $COMMON -DLLVM_CONFIG=/opt/rh/llvm-toolset-10.0/root/bin/llvm-config
 else
     echo "build $OS not supported"
 fi
