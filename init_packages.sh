@@ -1,5 +1,7 @@
 sudo yum install -y \
          words \
+         wget \
+         meson \
          ctags \
          clang \
          clang-devel \
