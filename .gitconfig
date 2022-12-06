@@ -1,12 +1,12 @@
 [user]
 	name = Alexander.Klishin
-	email = alexander.klishin@billing.ru
+	email = aklishin@ptsecurity.com
 [color]
 	ui = true
 [core]
-	editor = vim
+	editor = nvim
 [merge]
-	tool = vimdiff
+	tool = nvim -d
 [alias]
 	ci = commit
 	s = status --untracked-files=no

@@ -91,11 +91,13 @@ execute pathogen#infect()
 Helptags
 
 " fix background
-let g:solarized_termcolors=16
-set background=dark
-colorscheme solarized
+let g:solarized_termcolors=256
+" set t_Co=256
+" set background=dark
+" colorscheme solarized
+colorscheme solarized8_dark_flat
 " to fix solarized color scheme in tmux
-"set t_ut=
+" set t_ut=
 
 nnoremap <leader>f :MRU<CR>
 let MRU_Filename_Format = {
