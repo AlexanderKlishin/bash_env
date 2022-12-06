@@ -1,10 +1,9 @@
 sudo apt install -y \
     apt-file \
-    vim \
+    neovim \
     git \
     build-essential \
     cmake \
-    meson \
     clang \
     clang-format-11 \
     libclang-11-dev \
@@ -18,4 +17,9 @@ sudo apt install -y \
     python3-setuptools \
     python3-wheel \
     virtualenv \
-    libspdlog-dev
+    libspdlog-dev \
+    doxygen \
+    dnsutils
+
+pip3 install --upgrade meson
+pip3 install pyelftools

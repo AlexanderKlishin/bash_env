@@ -21,6 +21,8 @@ alias gll='git ll'
 alias glll='git lll'
 alias go='git checkout '
 
+alias ll='ls -la'
+
 #PS1='[\u@\h \W]$(__git_ps1)\$ '
 #PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
 

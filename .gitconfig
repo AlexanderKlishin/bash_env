@@ -25,3 +25,5 @@
 	llla = log --graph --decorate --pretty=fuller --abbrev-commit --all
 [push]
 	default = nothing
+[pull]
+    ff = only

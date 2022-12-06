@@ -91,3 +91,6 @@
 [submodule ".vim/bundle/vim-cpp-modern"]
 	path = .vim/bundle/vim-cpp-modern
 	url = https://github.com/bfrg/vim-cpp-modern.git
+[submodule ".vim/bundle/mesonic"]
+	path = .vim/bundle/mesonic
+	url = https://github.com/igankevich/mesonic.git
