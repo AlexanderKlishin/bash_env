@@ -60,12 +60,12 @@ set -o vi
 #    export LD_LIBRARY_PATH=$GCC_HOME/lib64:$LD_LIBRARY_PATH
 #fi
 
-if [ -d ~/llvm ]; then
-    export PATH=~/llvm/bin:$PATH
-    export LD_LIBRARY_PATH=~/llvm/lib:$LD_LIBRARY_PATH
-fi
+#if [ -d ~/llvm ]; then
+    #export PATH=~/llvm/bin:$PATH
+    #export LD_LIBRARY_PATH=~/llvm/lib:$LD_LIBRARY_PATH
+#fi
 
 export PATH=~/rtags/bin:$PATH
 
 export RTAGS_COMPILE_TIMEOUT=30000
-export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig
+#export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig
