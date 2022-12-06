@@ -6,7 +6,9 @@ HOME=$(cd ~ && pwd)
 INSTALL_PREFIX=$HOME/rtags
 
 OS=Unknown
-if [ -f /etc/lsb-release ]; then
+if [ -f /etc/os-release ]; then
+    OS=$(cat /etc/os-release | grep "^ID" | cut -d= -f2)
+elif [ -f /etc/lsb-release ]; then
     OS=$(cat /etc/lsb-release | grep DISTRIB_ID | cut -d= -f2)
 elif [ -f /etc/redhat-release ]; then
     OS="RedHat"$(rpm --eval "%{dist}" | sed 's|.el||')
@@ -42,6 +44,10 @@ elif [ $OS = "RedHat7_9" ]; then
     CXX=/opt/rh/llvm-toolset-11.0/root/usr/bin/clang++ \
     CC=/opt/rh/llvm-toolset-11.0/root/usr/bin/clang \
     /usr/bin/cmake3 .. $COMMON
+elif [ $OS = "debian" ]; then
+    CXX=/usr/bin/clang++ \
+    CC=/usr/bin/clang \
+    cmake .. $COMMON
 else
     echo "build $OS not supported"
 fi
