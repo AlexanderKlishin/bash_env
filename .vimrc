@@ -95,7 +95,8 @@ let g:solarized_termcolors=256
 " set t_Co=256
 " set background=dark
 " colorscheme solarized
-colorscheme solarized8_dark_flat
+" colorscheme solarized8_dark_flat
+colorscheme Atelier_SavannaDark
 " to fix solarized color scheme in tmux
 " set t_ut=
 

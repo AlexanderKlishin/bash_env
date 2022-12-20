@@ -19,7 +19,10 @@ sudo apt install -y \
     virtualenv \
     libspdlog-dev \
     doxygen \
-    dnsutils
+    dnsutils \
+    man \
+    gdb \
+    bear
 
 pip3 install --upgrade meson
 pip3 install pyelftools
