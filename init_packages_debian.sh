@@ -22,7 +22,13 @@ sudo apt install -y \
     dnsutils \
     man \
     gdb \
-    bear
+    bear \
+    netcat \
+    tcpdump \
+    net-tools \
+    dh-make \
+    rsync \
+    libsystemd-dev
 
 pip3 install --upgrade meson
 pip3 install pyelftools
