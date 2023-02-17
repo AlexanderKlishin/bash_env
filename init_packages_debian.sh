@@ -28,7 +28,14 @@ sudo apt install -y \
     net-tools \
     dh-make \
     rsync \
-    libsystemd-dev
+    libsystemd-dev \
+    ragel \
+    libyaml-cpp-dev \
+    bc \
+    lcov \
+    gcovr \
+    libibverbs1 \
+    libibverbs-dev
 
 pip3 install --upgrade meson
 pip3 install pyelftools
