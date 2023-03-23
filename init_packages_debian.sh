@@ -35,7 +35,9 @@ sudo apt install -y \
     lcov \
     gcovr \
     libibverbs1 \
-    libibverbs-dev
+    libibverbs-dev \
+    libtbb-dev \
+    protobuf-compiler
 
 pip3 install --upgrade meson
 pip3 install pyelftools
