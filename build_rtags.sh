@@ -7,7 +7,7 @@ INSTALL_PREFIX=$HOME/rtags
 
 OS=Unknown
 if [ -f /etc/os-release ]; then
-    OS=$(cat /etc/os-release | grep "^ID" | cut -d= -f2)
+    OS=$(cat /etc/os-release | grep "^ID=" | cut -d= -f2)
 elif [ -f /etc/lsb-release ]; then
     OS=$(cat /etc/lsb-release | grep DISTRIB_ID | cut -d= -f2)
 elif [ -f /etc/redhat-release ]; then
@@ -47,6 +47,8 @@ elif [ $OS = "RedHat7_9" ]; then
 elif [ $OS = "debian" ]; then
     CXX=/usr/bin/clang++ \
     CC=/usr/bin/clang \
+    cmake .. $COMMON
+elif [ $OS = "astra" ]; then
     cmake .. $COMMON
 else
     echo "build $OS not supported"
