@@ -1,4 +1,4 @@
-sudo apt install -y
+sudo apt install -y \
     git \
     tmux \
     gcc \
@@ -39,4 +39,10 @@ sudo apt install -y
     libtasn1-bin \
     libjson-perl \
     libpopt-dev \
-    libssl-dev
+    libssl-dev \
+    iputils-ping \
+    net-tools \
+    traceroute \
+    man \
+    iproute2 \
+    krb5-user
