@@ -45,4 +45,6 @@ sudo apt install -y \
     traceroute \
     man \
     iproute2 \
-    krb5-user
+    krb5-user \
+    ldap-utils \
+    gdb
