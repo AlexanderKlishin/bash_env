@@ -34,7 +34,8 @@ nnoremap <C-k> <C-w>k
 nnoremap \| :vsplit<CR>
 nnoremap _ :split<CR>
 nnoremap \ :q<CR>
-nnoremap - :MBEbd<CR>
+"nnoremap - :MBEbd<CR>
+nnoremap - :bd<CR>
 nnoremap <leader>x <C-w>x
 nnoremap <leader>\ :%bd \| e#<CR>
 
@@ -46,8 +47,27 @@ nnoremap <leader>t :tabnew<CR>
 "TODO: moving fo tabs
 "nnoremap <S-h> :tabNext<cr>
 "nnoremap <S-l> :tabnext<cr>
-nnoremap <S-h> :MBEbp<cr>
-nnoremap <S-l> :MBEbn<cr>
+"nnoremap <S-h> :MBEbp<cr>
+"nnoremap <S-l> :MBEbn<cr>
+"nnoremap <S-h> :bprev<cr>
+"nnoremap <S-l> :bnext<cr>
+" skip quickfix window in bnext bprev
+function! BpSkipTerm()
+  let start_buffer = bufnr('%')
+  bp
+  while &buftype ==# 'quickfix' && bufnr('%') != start_buffer
+    bp
+  endwhile
+endfunction
+function! BnSkipTerm()
+  let start_buffer = bufnr('%')
+  bn
+  while &buftype ==# 'quickfix' && bufnr('%') != start_buffer
+    bn
+  endwhile
+endfunction
+nnoremap <S-h> :call BpSkipTerm()<cr>
+nnoremap <S-l> :call BnSkipTerm()<CR>
 
 " go to command window
 nnoremap <tab> q:
@@ -201,6 +221,7 @@ let g:tagbar_sort = 0
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
