@@ -5,7 +5,7 @@
 	ui = true
 [core]
 	editor = vim
-    pager = less -q
+	pager = less -q
 [merge]
 	tool = vim -d
 [alias]
