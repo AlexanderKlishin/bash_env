@@ -18,6 +18,13 @@ set tags=./tags;$HOME
 let mapleader=" "
 set timeoutlen=500
 
+" enable python3 on start
+" https://robertbasic.com/blog/force-python-version-in-vim/
+" Vim can have both of them, but use only one at a time.
+" If you start using one version, there is no way to switch to the other one.
+if has('python3')
+endif
+
 " ignore linewrap
 nmap j gj
 nmap k gk
@@ -135,17 +142,22 @@ let g:clang_format#style_options = {
 vnoremap <Leader>f :ClangFormat<CR>
 nnoremap <leader>F :Format<CR>
 
+"let g:jedi#auto_vim_configuration = 0
+"remove conflict with nerd tree key binding
+"let g:jedi#usages_command = ""
+let g:jedi#usages_command = "<leader>r"
+
 " ctags
 "nnoremap <leader>g <C-]>
 "nnoremap <leader>b <C-t>
 " rtags
-nnoremap <leader>g :call rtags#JumpTo(g:SAME_WINDOW)<CR>
-nnoremap <leader>G :call rtags#JumpTo(g:V_SPLIT)<CR>
+autocmd FileType c,cpp nnoremap <leader>g :call rtags#JumpTo(g:SAME_WINDOW)<CR>
+autocmd FileType c,cpp nnoremap <leader>G :call rtags#JumpTo(g:V_SPLIT)<CR>
 nnoremap <leader>b <C-o>
-nnoremap <leader>r :call rtags#FindRefs()<CR>
-nnoremap <leader>R :call rtags#FindRefsCallTree()<CR>
-nnoremap <leader>v :call rtags#FindVirtuals()<CR>
-noremap <Leader>w :call rtags#RenameSymbolUnderCursor()<CR>
+autocmd FileType c,cpp nnoremap <leader>r :call rtags#FindRefs()<CR>
+autocmd FileType c,cpp nnoremap <leader>R :call rtags#FindRefsCallTree()<CR>
+autocmd FileType c,cpp nnoremap <leader>v :call rtags#FindVirtuals()<CR>
+autocmd FileType c,cpp nnoremap <Leader>w :call rtags#RenameSymbolUnderCursor()<CR>
 " rtags use vim QuickFix window
 let g:rtagsUseLocationList = 0
 
