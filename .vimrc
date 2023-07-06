@@ -191,7 +191,7 @@ command -nargs=1 Gi Grep -R -I -i --exclude=tags --exclude=*.o --exclude=*.a --e
 "nnoremap & :G <cword> <CR>
 nnoremap & :Grep -R -I
     \ --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d
-    \ --exclude-dir=build --exclude-dir=build_dir --exclude-dir=ns_build_env
+    \ --exclude-dir=build --exclude-dir=build_dir --exclude-dir=ns_build_env --exclude-dir=bin
     \ <cword> * <CR>
 nnoremap ^ :Grep -R -I
     \ --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d
