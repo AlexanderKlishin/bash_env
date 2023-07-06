@@ -90,9 +90,9 @@ vnoremap < <gv
 
 " CodeStyle
 set tabstop=8
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+set shiftwidth=8
+set softtabstop=8
+"set expandtab
 
 " copy text to the end-of-line - like y$
 nnoremap Y y$
@@ -167,12 +167,13 @@ let g:rtagsUseLocationList = 0
 " save and build
 "nnoremap <F5> :wall \| make -C ~/src/out/Release -j6<Cr>
 "nnoremap <F6> :wall \| make -C ~/src/out/Debug -j6<Cr>
-set makeprg=ninja
 nnoremap <F7> :wall \| make<Cr>
-nnoremap <leader>m :wall \| make -C build<Cr>
+"nnoremap <leader>m :wall \| make -C build<Cr>
+nnoremap <leader>m :wall \| make -j 8<Cr>
 nnoremap <leader>M :!rc -J build<Cr>
 nnoremap <leader>z :botright copen<Cr>
 nnoremap <leader>e :cnext<Cr>
+"set makeprg=ninja
 "set makeprg=ninja
 
 " C++ code completion
