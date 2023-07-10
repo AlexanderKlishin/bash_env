@@ -12,8 +12,8 @@ done
 
 cd "$SH"
 git submodule init || exit 2
-git submodule update --recursive || exit 3
+git submodule update --init --recursive || exit 2
 
-./fonts/install.sh || exit 4
+./fonts/install.sh || exit 3
 
 echo "done"

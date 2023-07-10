@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-cd ~/src && rm -f vim
+cd ~/src && rm -rf vim
 git clone https://github.com/vim/vim.git
 cd vim/src
 #git checkout v8.1.0000
