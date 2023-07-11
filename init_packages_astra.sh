@@ -8,9 +8,10 @@ sudo apt install -y \
     python2-dev \
     python3 \
     python3-dev \
-    python3-markdown \
     python3-dns \
     python3-dnspython \
+    python3-jedi \
+    python3-markdown \
     apt-file \
     aptitude \
     build-essential \
