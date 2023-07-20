@@ -48,4 +48,5 @@ sudo apt install -y \
     iproute2 \
     krb5-user \
     ldap-utils \
-    gdb
+    gdb \
+    bind9
