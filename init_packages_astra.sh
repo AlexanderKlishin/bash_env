@@ -49,4 +49,6 @@ sudo apt install -y \
     krb5-user \
     ldap-utils \
     gdb \
-    bind9
+    bind9 \
+    autoconf \
+    libtool
