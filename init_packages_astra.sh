@@ -51,4 +51,13 @@ sudo apt install -y \
     gdb \
     bind9 \
     autoconf \
-    libtool
+    libtool \
+    gettext \
+    gperf \
+    autopoint \
+    gtk-doc-tools \
+    wget \
+    autogen \
+    libev4 \
+    libev-dev \
+    texinfo
