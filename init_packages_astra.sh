@@ -60,4 +60,5 @@ sudo apt install -y \
     autogen \
     libev4 \
     libev-dev \
-    texinfo
+    texinfo \
+    lmdb-utils
