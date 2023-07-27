@@ -61,4 +61,5 @@ sudo apt install -y \
     libev4 \
     libev-dev \
     texinfo \
-    lmdb-utils
+    lmdb-utils \
+    dnsutils
