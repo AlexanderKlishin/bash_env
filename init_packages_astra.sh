@@ -62,4 +62,7 @@ sudo apt install -y \
     libev-dev \
     texinfo \
     lmdb-utils \
-    dnsutils
+    dnsutils \
+    python3-cryptography \
+    python3-pyasn1 \
+    python3-iso8601
