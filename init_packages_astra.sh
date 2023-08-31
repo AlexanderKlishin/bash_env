@@ -65,4 +65,5 @@ sudo apt install -y \
     dnsutils \
     python3-cryptography \
     python3-pyasn1 \
-    python3-iso8601
+    python3-iso8601 \
+    linux-tools-common
