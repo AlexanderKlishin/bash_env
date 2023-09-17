@@ -49,6 +49,8 @@ elif [ $OS = "debian" ]; then
     CC=/usr/bin/clang \
     cmake .. $COMMON
 elif [ $OS = "astra" ]; then
+    CXX=/usr/bin/clang++ \
+    CC=/usr/bin/clang \
     cmake .. $COMMON
 else
     echo "build $OS not supported"
