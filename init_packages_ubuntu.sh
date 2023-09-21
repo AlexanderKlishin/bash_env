@@ -1,8 +1,41 @@
-sudo apt install \
+sudo apt install -y \
     vim \
+    gcc \
+    g++ \
     libcppunit-dev \
     zlib1g-dev \
     openssl \
     libssl-dev \
     emacs \
-    g++
+    libspeexdsp-dev \
+    libminizip-dev \
+    qt6-base-dev \
+    libqt6core5compat6 \
+    libqt6multimedia6 \
+    libnl-route-3-200 \
+    libc-ares2 \
+    liblua5.2-0 \
+    libsmi2ldbl \
+    libsnappy1v5 \
+    python3-dev \
+    python3-dns \
+    python3-dnspython \
+    python3-jedi \
+    python3-markdown \
+    libjansson-dev \
+    libarchive-dev \
+    libldap2-dev \
+    libacl1-dev \
+    libjson-perl \
+    libpopt-dev \
+    libgnutls28-dev \
+    liblmdb-dev \
+    libgpgme11-dev \
+    libparse-yapp-perl \
+    libpam0g-dev \
+    libdbus-1-dev \
+    lmdb-utils \
+    flex \
+    bison \
+    ldap-utils \
+    pkgconf
