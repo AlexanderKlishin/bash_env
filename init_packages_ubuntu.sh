@@ -2,6 +2,10 @@ sudo apt install -y \
     vim \
     gcc \
     g++ \
+    cmake \
+    clang \
+    bear \
+    libclang-14-dev \
     libcppunit-dev \
     zlib1g-dev \
     openssl \
@@ -20,6 +24,7 @@ sudo apt install -y \
     python3-dev \
     python3-dns \
     python3-dnspython \
+    python3-iso8601 \
     python3-jedi \
     python3-markdown \
     libjansson-dev \

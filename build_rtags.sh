@@ -26,7 +26,7 @@ COMMON="  -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX"
 COMMON+=" -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
 COMMON+=" -DCMAKE_BUILD_TYPE=RelWithDebInfo"
 
-if [ $OS = "Ubuntu" ]; then
+if [ $OS = "ubuntu" ]; then
     cmake .. $COMMON
 elif [ $OS = "RedHat7_9" ]; then
     CLANGVER=$(clang++ --version | grep clang | cut -d " " -f 3 | cut -d "." -f 1)
