@@ -12,6 +12,9 @@ sudo apt install -y \
     python3-dnspython \
     python3-jedi \
     python3-markdown \
+    python3-cryptography \
+    python3-pyasn1 \
+    python3-iso8601 \
     apt-file \
     aptitude \
     build-essential \
@@ -63,7 +66,4 @@ sudo apt install -y \
     texinfo \
     lmdb-utils \
     dnsutils \
-    python3-cryptography \
-    python3-pyasn1 \
-    python3-iso8601 \
     linux-tools-common
