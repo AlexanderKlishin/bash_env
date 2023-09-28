@@ -4,12 +4,9 @@
 [submodule ".vim/bundle/vim-rtags"]
 	path = .vim/bundle/vim-rtags
 	url = https://github.com/lyuts/vim-rtags.git
-[submodule "src/rtags"]
-	path = src/rtags
-	url = https://github.com/Andersbakken/rtags.git
 [submodule "rtags"]
 	path = rtags
-	url = https://github.com/Andersbakken/rtags.git
+	url = https://github.com/AlexanderKlishin/rtags.git
 [submodule ".vim/bundle/robotframework-vim"]
 	path = .vim/bundle/robotframework-vim
 	url = https://github.com/mfukar/robotframework-vim
