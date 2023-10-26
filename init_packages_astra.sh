@@ -11,6 +11,7 @@ sudo apt install -y \
     python3-dev \
     python3-dns \
     python3-dnspython \
+    python3-gpg \
     python3-iso8601 \
     python3-jedi \
     python3-markdown \
