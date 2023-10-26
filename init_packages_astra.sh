@@ -7,14 +7,15 @@ sudo apt install -y \
     python2 \
     python2-dev \
     python3 \
+    python3-cryptography \
     python3-dev \
     python3-dns \
     python3-dnspython \
+    python3-iso8601 \
     python3-jedi \
     python3-markdown \
-    python3-cryptography \
     python3-pyasn1 \
-    python3-iso8601 \
+    python3-requests \
     apt-file \
     aptitude \
     build-essential \
