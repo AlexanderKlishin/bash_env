@@ -1,19 +1,21 @@
 sudo apt install -y \
-    vim \
-    gcc \
-    g++ \
-    cmake \
-    clang \
     bear \
-    libclang-14-dev \
-    libcppunit-dev \
-    zlib1g-dev \
-    openssl \
-    libssl-dev \
+    bison \
+    clang \
+    cmake \
+    curl \
     emacs \
-    libspeexdsp-dev \
-    libminizip-dev \
-    qt6-base-dev \
+    flex \
+    g++ \
+    gcc \
+    ldap-utils \
+    locales \
+    mercurial \
+    net-tools \
+    openssl \
+    pkgconf \
+    tmux \
+    vim \
     libqt6core5compat6 \
     libqt6multimedia6 \
     libnl-route-3-200 \
@@ -27,20 +29,23 @@ sudo apt install -y \
     python3-iso8601 \
     python3-jedi \
     python3-markdown \
-    libjansson-dev \
-    libarchive-dev \
-    libldap2-dev \
+    libssl-dev \
+    qt6-base-dev \
+    zlib1g-dev \
     libacl1-dev \
-    libjson-perl \
-    libpopt-dev \
-    libgnutls28-dev \
-    liblmdb-dev \
-    libgpgme11-dev \
-    libparse-yapp-perl \
-    libpam0g-dev \
+    libarchive-dev \
+    libclang-14-dev \
+    libcppunit-dev \
     libdbus-1-dev \
-    lmdb-utils \
-    flex \
-    bison \
-    ldap-utils \
-    pkgconf
+    libghc-regex-pcre-dev \
+    libgnutls28-dev \
+    libgpgme11-dev \
+    libjansson-dev \
+    libjson-perl \
+    libldap2-dev \
+    liblmdb-dev \
+    libminizip-dev \
+    libpam0g-dev \
+    libparse-yapp-perl \
+    libpopt-dev \
+    libspeexdsp-dev
