@@ -1,51 +1,60 @@
 sudo apt install -y \
+    autoconf \
     bear \
     bison \
     clang \
     cmake \
     curl \
+    debhelper \
+    devscripts \
     emacs \
     flex \
     g++ \
     gcc \
     ldap-utils \
+    libtool \
     locales \
     mercurial \
     net-tools \
     openssl \
     pkgconf \
+    quilt \
     tmux \
     vim \
+    libc-ares2 \
+    libjson-perl \
+    liblua5.2-0 \
+    libnl-route-3-200 \
     libqt6core5compat6 \
     libqt6multimedia6 \
-    libnl-route-3-200 \
-    libc-ares2 \
-    liblua5.2-0 \
     libsmi2ldbl \
     libsnappy1v5 \
+    libstdc++6 \
     python3-dev \
     python3-dns \
     python3-dnspython \
     python3-iso8601 \
     python3-jedi \
     python3-markdown \
-    libssl-dev \
-    qt6-base-dev \
-    zlib1g-dev \
     libacl1-dev \
     libarchive-dev \
     libclang-14-dev \
     libcppunit-dev \
     libdbus-1-dev \
+    libgeoip-dev \
     libghc-regex-pcre-dev \
     libgnutls28-dev \
     libgpgme11-dev \
     libjansson-dev \
-    libjson-perl \
     libldap2-dev \
     liblmdb-dev \
     libminizip-dev \
     libpam0g-dev \
     libparse-yapp-perl \
+    libpcre3-dev \
     libpopt-dev \
-    libspeexdsp-dev
+    libspeexdsp-dev \
+    libssl-dev \
+    libxslt1-dev \
+    qt6-base-dev \
+    zlib1g-dev
