@@ -169,7 +169,7 @@ let g:rtagsUseLocationList = 0
 "nnoremap <F6> :wall \| make -C ~/src/out/Debug -j6<Cr>
 nnoremap <F7> :wall \| make<Cr>
 "nnoremap <leader>m :wall \| make -C build<Cr>
-nnoremap <leader>m :wall \| make -C ~/src/nginx-1.25.4/ -j 8<Cr>
+nnoremap <leader>m :wall \| make -j 8<Cr>
 nnoremap <leader>M :!rc -J build<Cr>
 nnoremap <leader>z :botright copen<Cr>
 nnoremap <leader>e :cnext<Cr>
