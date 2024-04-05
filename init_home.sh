@@ -1,7 +1,7 @@
 
 SH=$(cd `dirname $0` && pwd)
 
-FILES=".vim .vimrc .gitconfig .bash_aliases .tmux.conf"
+FILES=".vim .vimrc .gitconfig .bash_aliases .tmux.conf .inputrc"
 
 for F in $FILES; do
     F_=$(basename $F)
