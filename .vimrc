@@ -32,6 +32,9 @@ nmap k gk
 " folders
 nnoremap <leader><leader> za
 
+" open new split on the right side
+set splitright
+
 " fast window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
