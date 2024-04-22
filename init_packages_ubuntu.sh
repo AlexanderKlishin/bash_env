@@ -3,6 +3,8 @@ sudo apt install -y \
     bear \
     bison \
     clang \
+    clang-format \
+    clang-format-15 \
     cmake \
     curl \
     debhelper \
@@ -11,7 +13,9 @@ sudo apt install -y \
     flex \
     g++ \
     gcc \
+    gdb \
     ldap-utils \
+    libc-ares2 \
     libtool \
     locales \
     mercurial \
@@ -21,7 +25,6 @@ sudo apt install -y \
     quilt \
     tmux \
     vim \
-    libc-ares2 \
     libjson-perl \
     liblua5.2-0 \
     libnl-route-3-200 \
