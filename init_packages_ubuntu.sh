@@ -1,7 +1,9 @@
 sudo apt install -y \
     autoconf \
+    bazel-bootstrap \
     bear \
     bison \
+    check \
     clang \
     clang-format \
     clang-format-15 \
@@ -9,10 +11,13 @@ sudo apt install -y \
     curl \
     debhelper \
     devscripts \
+    docker-compose \
     emacs \
     flex \
     g++ \
     gcc \
+    gcc-12 \
+    g++-12 \
     gdb \
     ldap-utils \
     libc-ares2 \
@@ -25,6 +30,7 @@ sudo apt install -y \
     quilt \
     tmux \
     vim \
+    wrk \
     libjson-perl \
     liblua5.2-0 \
     libnl-route-3-200 \
@@ -33,6 +39,8 @@ sudo apt install -y \
     libsmi2ldbl \
     libsnappy1v5 \
     libstdc++6 \
+    libtap-formatter-junit-perl \
+    libtest-hexstring-perl \
     python3-dev \
     python3-dns \
     python3-dnspython \
