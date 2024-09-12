@@ -19,6 +19,7 @@ sudo apt install -y \
     docker-compose \
     emacs \
     ethtool \
+    flatpak \
     flex \
     g++ \
     gcc \
