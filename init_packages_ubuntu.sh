@@ -29,6 +29,7 @@ sudo apt install -y \
     graphviz \
     jq \
     jshon \
+    lcov \
     ldap-utils \
     libc-ares2 \
     libtool \
@@ -47,6 +48,7 @@ sudo apt install -y \
     vim \
     wireshark-qt \
     wrk \
+    libipset-dev \
     libjson-perl \
     liblua5.2-0 \
     libnl-route-3-200 \
