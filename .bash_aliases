@@ -75,3 +75,5 @@ export RTAGS_COMPILE_TIMEOUT=30000
 #export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig
 
 export LC_ALL="ru_RU.UTF-8"
+
+alias yubikey-add='ssh-add -e /usr/local/lib/opensc-pkcs11.so; ssh-add -s /usr/local/lib/opensc-pkcs11.so'
