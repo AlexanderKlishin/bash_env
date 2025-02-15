@@ -87,6 +87,9 @@ nnoremap ; :
 " go to next difference
 nnoremap <leader>d ]c
 
+nnoremap <leader>l :GV!<CR>
+nnoremap <leader>L :GV --all<CR>
+
 " keeps the current visual block selection active after changing indent with '<' or '>'
 vnoremap > >gv
 vnoremap < <gv
