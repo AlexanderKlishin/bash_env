@@ -166,6 +166,9 @@ autocmd FileType c,cpp nnoremap <leader>v :call rtags#FindVirtuals()<CR>
 autocmd FileType c,cpp nnoremap <Leader>w :call rtags#RenameSymbolUnderCursor()<CR>
 " rtags use vim QuickFix window
 let g:rtagsUseLocationList = 0
+" go
+autocmd FileType go nnoremap <leader>g :GoDef<CR>
+autocmd FileType go nnoremap <leader>r :GoReferrers<CR>
 
 " fast airline color changes
 " set timeoutlen=50
