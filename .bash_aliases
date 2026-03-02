@@ -70,6 +70,8 @@ fi
 
 export PATH=~/rtags/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
+# vim-go
+export PATH=$PATH:~/go/bin
 
 export RTAGS_COMPILE_TIMEOUT=30000
 #export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig
