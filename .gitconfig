@@ -12,6 +12,8 @@
 	ci = commit
 	s = status --untracked-files=no
 	st = status
+	si = status -uall --ignored
+	cleanall = clean -dfX
 	br = branch
 	co = checkout
 	re = remote
