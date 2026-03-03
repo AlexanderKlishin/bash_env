@@ -19,7 +19,7 @@ alias g=git
 alias gl='git l'
 alias gll='git ll'
 alias glll='git lll'
-alias go='git checkout '
+#alias go='git checkout '
 
 alias ll='ls -la'
 
