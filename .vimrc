@@ -169,6 +169,7 @@ let g:rtagsUseLocationList = 0
 " go
 autocmd FileType go nnoremap <leader>g :GoDef<CR>
 autocmd FileType go nnoremap <leader>r :GoReferrers<CR>
+let g:go_gopls_options = ['-remote=:37374']
 
 " fast airline color changes
 " set timeoutlen=50
