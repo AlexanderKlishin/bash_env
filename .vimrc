@@ -169,6 +169,8 @@ let g:rtagsUseLocationList = 0
 " go
 autocmd FileType go nnoremap <leader>g :GoDef<CR>
 autocmd FileType go nnoremap <leader>r :GoReferrers<CR>
+" run daemon:
+" gopls -vv -listen=":37374" -logfile=/home/a-klishin/src/gopls.log -debug=:0
 let g:go_gopls_options = ['-remote=:37374']
 
 " fast airline color changes
@@ -182,7 +184,8 @@ nnoremap <F7> :wall \| make<Cr>
 nnoremap <leader>m :wall \| make -j 8<Cr>
 nnoremap <leader>M :!rc -J build<Cr>
 nnoremap <leader>z :botright copen<Cr>
-nnoremap <leader>e :cnext<Cr>
+autocmd FileType c,cpp,py nnoremap <leader>e :cnext<Cr>
+autocmd FileType go nnoremap <leader>e :lnext<Cr>
 "set makeprg=ninja
 "set makeprg=ninja
 
