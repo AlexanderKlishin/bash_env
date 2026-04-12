@@ -158,7 +158,7 @@ let g:jedi#usages_command = "<leader>r"
 "nnoremap <leader>b <C-t>
 " rtags
 autocmd FileType c,cpp nnoremap <leader>g :call rtags#JumpTo(g:SAME_WINDOW)<CR>
-autocmd FileType c,cpp nnoremap <leader>G :call rtags#JumpTo(g:V_SPLIT)<CR>
+"autocmd FileType c,cpp nnoremap <leader>G :call rtags#JumpTo(g:V_SPLIT)<CR>
 nnoremap <leader>b <C-o>
 autocmd FileType c,cpp nnoremap <leader>r :call rtags#FindRefs()<CR>
 autocmd FileType c,cpp nnoremap <leader>R :call rtags#FindRefsCallTree()<CR>
@@ -200,7 +200,7 @@ let g:SuperTabMappingBackward = '<tab>'
 " commands
 "command Ctags !ctags -R * /usr/include/*
 command Astyle !astyle -A3 -t4 -k3 -W3 -U -H -o -xn -xc -xk -O -m0 %
-command -nargs=1 G Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <args> *
+"command -nargs=1 G Grep -R -I --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <args> *
 command -nargs=1 Gi Grep -R -I -i --exclude=tags --exclude=*.o --exclude=*.a --exclude=*.d --exclude-dir=build --exclude-dir=build_dir <args> *
 "nnoremap & :G <cword> <CR>
 nnoremap & :Grep -R -I
