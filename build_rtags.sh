@@ -7,7 +7,7 @@ INSTALL_PREFIX=$HOME/rtags
 
 OS=Unknown
 if [ -f /etc/os-release ]; then
-    OS=$(cat /etc/os-release | grep "^ID=" | cut -d= -f2)
+    OS=$(. /etc/os-release; echo $ID)
 elif [ -f /etc/lsb-release ]; then
     OS=$(cat /etc/lsb-release | grep DISTRIB_ID | cut -d= -f2)
 elif [ -f /etc/redhat-release ]; then
@@ -49,6 +49,10 @@ elif [ $OS = "debian" ]; then
     CC=/usr/bin/clang \
     cmake .. $COMMON
 elif [ $OS = "astra" ]; then
+    CXX=/usr/bin/clang++ \
+    CC=/usr/bin/clang \
+    cmake .. $COMMON
+elif [ $OS = "almalinux" ]; then
     CXX=/usr/bin/clang++ \
     CC=/usr/bin/clang \
     cmake .. $COMMON
