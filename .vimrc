@@ -172,6 +172,7 @@ autocmd FileType go nnoremap <leader>r :GoReferrers<CR>
 " run daemon:
 " gopls -vv -listen=":37374" -logfile=/home/a-klishin/src/gopls.log -debug=:0
 let g:go_gopls_options = ['-remote=:37374']
+let g:go_version_warning = 0
 
 " fast airline color changes
 " set timeoutlen=50
